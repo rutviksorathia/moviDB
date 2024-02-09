@@ -37,6 +37,25 @@ export default function App() {
         <Text className='mt-1 text-lg text-slate-500'>One man's campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as
         eekeepers.</Text>
       </View>
+      
+      <View className='flex-row mt-2 mx-6 justify-between'>
+        <Text className='text-white text-2xl font-bold'>Movie Cast</Text>
+        <View className='h-[36] w-[36] bg-white rounded-full absolute right-0 overflow-hidden justify-center'>
+         <Text className='items-center justify-center'>+41</Text>
+        </View>
+        <View className='h-[36] w-[36] bg-white rounded-full absolute right-5 overflow-hidden'>
+           <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//lldeQ91GwIVff43JBrpdbAAeYWj.jpg'}} />
+        </View>
+        <View className='h-[36] w-[36] bg-white rounded-full absolute right-9 overflow-hidden'>
+          <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//cBkHUBzqoqrnkxDXWlqQmm91pD2.jpg'}} />
+        </View>
+        <View className='h-[36] w-[36] bg-white rounded-full absolute right-14 overflow-hidden'>
+          <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//kl8UjAeoj2ET20Udt8u9tgr5FAp.jpg'}} />
+        </View>
+        <View className='h-[36] w-[36] bg-white rounded-full absolute right-16 overflow-hidden'>
+          <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//npowygg8rH7uJ4v7rAoDMsHBhNq.jpg'}} />
+        </View>
+      </View>
 
       
 
