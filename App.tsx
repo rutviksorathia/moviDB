@@ -1,9 +1,11 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import FilmCast from './FilmCast'
+
 
 export default function App() {
   return (
-    
+    <ScrollView>
       <View className='h-full bg-black'>
       <View className='h-[250] w-full bg-white'>
         <Image className='h-full'
@@ -57,14 +59,23 @@ export default function App() {
         </View>
       </View>
 
-      
+      <View className='flex-row flex-wrap px-6 pt-6 gap-5'>
 
-
-
-
-
-
+        <View className='h-[210] w-[160] border-4  border-slate-500 rounded-xl overflow-hidden'>
+           <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//lldeQ91GwIVff43JBrpdbAAeYWj.jpg'}} />
+        </View>
+        <View className='h-[210] w-[160] border-4  border-slate-500 rounded-xl overflow-hidden'>
+           <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//npowygg8rH7uJ4v7rAoDMsHBhNq.jpg'}} />
+        </View>
+        <View className='h-[210] w-[160] border-4  border-slate-500 rounded-xl overflow-hidden'>
+           <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//kl8UjAeoj2ET20Udt8u9tgr5FAp.jpg'}} />
+        </View>
+        <View className='h-[210] w-[160] border-4  border-slate-500 rounded-xl overflow-hidden'>
+           <Image className='h-full' source={{ uri: 'https://image.tmdb.org/t/p/w200//cBkHUBzqoqrnkxDXWlqQmm91pD2.jpg'}} />
+        </View>
       </View>
+      </View>
+      </ScrollView>
     
   )
 }
