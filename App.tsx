@@ -1,118 +1,53 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+export default function App() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+    
+      <View className='h-full bg-black'>
+      <View className='h-[250] w-full bg-white'>
+        <Image className='h-full'
+              source={{ uri: 'https://image.tmdb.org/t/p/original//4MCKNAc6AbWjEsM2h9Xc29owo4z.jpg'}}
+          resizeMode="cover" /> 
+        <View className='flex-row h-[160]  absolute left-0 right-0 bottom-0 px-6 items-end'>
+          <View className='flex-none  h-[130] w-[100]  border-4  border-white rounded-xl mb-2 justify-end overflow-hidden'>
+            <Image className='h-full ' source={{ uri: 'https://image.tmdb.org/t/p/original//4MCKNAc6AbWjEsM2h9Xc29owo4z.jpg'}} />
+          </View>
+          <View className='flex-1 mb-2 ml-2'>
+            <Text className='text-white font-bold text-xl'>The Beekeeper</Text>
+            <Text className=' text-white text-base'>Expose the corruption. Protect the hive.</Text>
+          </View>
         </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+      </View>
+
+      <View className='flex-row mt-4 px-6'>
+        <View className='border border-white rounded-xl'>
+          <Text className='text-white p-1.5'>ACTION</Text>
+        </View>
+        <View className='border border-white rounded-xl mx-4'>
+          <Text className='text-white p-1.5'>THRILLER</Text>
+        </View>
+        <View className='border border-white rounded-xl'>
+          <Text className='text-white p-1.5'>DRAMA</Text>
+        </View>
+      </View>
+
+      <View className='mt-6 mx-6'>
+        <Text className='text-white text-xl font-bold'>January 10, 2024</Text>
+        <Text className='mt-1 text-lg text-slate-500'>One man's campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as
+        eekeepers.</Text>
+      </View>
+
+      
+
+
+
+
+
+
+      </View>
+    
+  )
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
+const styles = StyleSheet.create({})
